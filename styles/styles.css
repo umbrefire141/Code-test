@@ -511,7 +511,6 @@ body {
 	content: '';
 	display: inline-block;
 	vertical-align: middle;
-	height: 100%;
 }
 
 .modal--active {
