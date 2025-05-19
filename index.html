@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+	<link rel="stylesheet" href="styles/reset.css">
+	<link rel="stylesheet" href="styles/fonts.css">
+	<link rel="stylesheet" href="styles/styles.css">
+	<title>Code</title>
+	<script src="https://api-maps.yandex.ru/v3/?apikey=510cc4e7-bf32-4692-90bb-9a78497dca16&lang=ru_RU"></script>
+	<script>
+		initMap()
+
+		async function initMap() {
+			await ymaps3.ready
+
+			const { YMap, YMapDefaultSchemeLayer } = ymaps3
+
+			const map = new YMap(
+				document.getElementById('map'),
+				{
+					location: {
+						center: [37.588144, 55.733842],
+						zoom: 10
+					}
+				}
+			)
+
+			map.addChild(new YMapDefaultSchemeLayer())
+		}
+	</script>
+</head>
+
+<body>
+	<div class="wrapper">
+		<!-- Header -->
+		<header class="header">
+			<div class="container">
+				<div class="header__block">
+					<a href="#" class="header__logo">
+						<img src="./icons/logo.svg" alt="Code logo" class="logo">
+					</a>
+					<div class="header__nav">
+						<div class="header__item">
+							<ul class="menu">
+								<li class="menu__item">
+									<a href="#" class="menu__link">Чему вы научитесь</a>
+								</li>
+								<li class="menu__item">
+									<a href="#" class="menu__link">Процесс обучения</a>
+								</li>
+								<li class="menu__item">
+									<a href="#" class="menu__link">Стоимость</a>
+								</li>
+								<li class="menu__item">
+									<a href="#" class="menu__link">Контакты</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<a href="tel:+74993489396" class="header__phone phone">+7 (499) 348 93 96</a>
+					<button class="burger">
+						<span></span>
+					</button>
+				</div>
+			</div>
+		</header>
+
+		<!-- Main -->
+		<main class="main">
+			<!-- Slider -->
+			<div class="slider">
+				<div class="container">
+					<div class="swiper slider__wrapper">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div class="slider__item">
+									<div>
+										<h3 class="title slider__item-title">Школа <span>{</span><b>программирования</b><span>}</span> для
+											тех,
+											кому нужны реальные навыки, а не
+											просто сертификат</h3>
+										<div class="line slider__item-line"></div>
+										<div class="slider__item-text">Закажите звонок, и наш специалист свяжется с вами в ближайшее время
+										</div>
+										<button class="btn slider__item-btn open_modal">
+											<span>Заказать звонок</span>
+											<img src="./icons/arrow.svg" />
+										</button>
+									</div>
+									<img src="./images/slider/01.svg" alt="Img" class="slider__item-img" />
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="slider__item">
+									<div>
+										<h3 class="title slider__item-title">Обучение
+											через практику</h3>
+										<div class="line slider__item-line"></div>
+										<div class="slider__item-text">Всё, что вы узнали, вы тут же начинаете применять на практике. Вы
+											сразу видите результаты своего труда.
+										</div>
+										<button class="btn slider__item-btn open_modal">
+											<span>Заказать звонок</span>
+											<img src="./icons/arrow.svg" />
+										</button>
+									</div>
+									<img src="./images/slider/02.svg" alt="Img" class="slider__item-img" />
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="slider__item">
+									<div>
+										<h3 class="title slider__item-title">Весь материал разбит на небольшие уроки</h3>
+										<div class="line slider__item-line"></div>
+										<div class="slider__item-text">Теория и практика подаются маленькими порциями. Так вам будет легче
+											усваивать новые знания.
+										</div>
+										<button class="btn slider__item-btn open_modal">
+											<span>Заказать звонок</span>
+											<img src="./icons/arrow.svg" />
+										</button>
+									</div>
+									<img src="./images/slider/03.svg" alt="Img" class="slider__item-img" />
+								</div>
+							</div>
+						</div>
+						<div class="swiper-button-prev"></div>
+						<div class="swiper-button-next"></div>
+					</div>
+				</div>
+			</div>
+			<!-- Study -->
+			<div class="study">
+				<div class="container">
+					<h2 class="title study__title">Обучение в CoDe – это удобно и результативно</h2>
+					<div class="study__row">
+						<div class="study__item">
+							<img src="./images/study/01.svg" alt="icon" class="study__item-img">
+							<div class="study__content">
+								<h3 class="study__item-title">Огромное количество практики</h3>
+								<div class="study__item-text">Более 500 самостоятельных заданий и 20 полноценных больших проектов</div>
+
+							</div>
+						</div>
+						<div class="study__item">
+							<img src="./images/study/02.svg" alt="icon" class="study__item-img">
+							<div class="study__content">
+								<h3 class="study__item-title">Современные методики обучения</h3>
+								<div class="study__item-text">Спиральное обучение:
+									погружаемся в материал постепенно, виток за витком</div>
+
+							</div>
+						</div>
+						<div class="study__item">
+							<img src="./images/study/03.svg" alt="icon" class="study__item-img">
+							<div class="study__content">
+								<h3 class="study__item-title">Простое и понятное изложение</h3>
+								<div class="study__item-text">Вместо заумных терминов – примеры из реального мира</div>
+
+							</div>
+						</div>
+						<div class="study__item">
+							<img src="./images/study/04.svg" alt="icon" class="study__item-img">
+							<div class="study__content">
+								<h3 class="study__item-title">Гибкий график занятий</h3>
+								<div class="study__item-text">Учитесь в любое время в удобном
+
+									для вас темпе</div>
+							</div>
+						</div>
+						<div class="study__item">
+							<img src="./images/study/05.svg" alt="icon" class="study__item-img">
+							<div class="study__content">
+								<h3 class="study__item-title" style="max-width: 200px;">Прямая связь с опытными программистами</h3>
+								<div class="study__item-text">Задавайте вопросы
+									и отправляйте свой код на проверку</div>
+
+							</div>
+						</div>
+						<div class="study__item">
+							<img src="./images/study/06.svg" alt="icon" class="study__item-img">
+							<div class="study__content">
+								<h3 class="study__item-title">Оплата небольшими частями</h3>
+								<div class="study__item-text">Платите только за тот материал, который сейчас изучаете,
+									а не за весь курс сразу</div>
+
+							</div>
+						</div>
+						<div class="study__item">
+							<img src="./images/study/07.svg" alt="icon" class="study__item-img">
+							<div class="study__content">
+								<h3 class="study__item-title">Быстрый и легкий возврат</h3>
+								<div class="study__item-text">Если передумаете учиться –
+									вернем деньги за 3 рабочих дня</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Info -->
+			<div class="info">
+				<div class="container">
+					<div class="info__item">
+						<img src="./images/info/01.jpg" alt="" class="info__item-img">
+						<div class="info__item-block">
+							<h3 class="info__item-title">Помощь и поддержка</h3>
+							<div class="info__item-text">Если в процессе обучения возникнут сложности, вы всегда сможете задать вопрос
+								своему наставнику.</div>
+							<div class="info__item-text">Раз в несколько уроков вы будете получать большое задание, которое нужно
+								будет сдавать на проверку код-ревьюеру. Он внимательно изучит ваш код, найдет ошибки и поможет вам стать
+								лучше. </div>
+						</div>
+					</div>
+					<div class="info__item">
+
+						<img src="./images/info/02.jpg" alt="" class="info__item-img">
+						<div class="info__item-block">
+							<h3 class="info__item-title">Методика обучения
+							</h3>
+							<div class="info__item-text">Весь учебный материал структурирован по принципу «спирального обучения».
+								Сначала вы получаете базовые знания, а затем на каждом витке спирали углубляетесь в изученные темы,
+								доводя их понимание до совершенства. Такой подход упрощает обучение и гарантирует, что вы не пропустите
+								ничего важного.</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Gallery -->
+			<div class="gallery">
+				<div class="container">
+					<div class="gallery__grid">
+						<a href="./images/gallery/01.jpg" data-fancybox="gallery" data-caption="Single image" class="gallery__item">
+							<img src="./images/gallery/01.jpg" />
+						</a>
+						<a href="./images/gallery/02.jpg" data-fancybox="gallery" data-caption="Single image" class="gallery__item">
+							<img src="./images/gallery/02.jpg" />
+						</a>
+						<a href="./images/gallery/03.jpg" data-fancybox="gallery" data-caption="Single image" class="gallery__item">
+							<img src="./images/gallery/03.jpg" />
+						</a>
+						<a href="./images/gallery/04.jpg" data-fancybox="gallery" data-caption="Single image" class="gallery__item">
+							<img src="./images/gallery/04.jpg" />
+						</a>
+						<a href="./images/gallery/05.jpg" data-fancybox="gallery" data-caption="Single image" class="gallery__item">
+							<img src="./images/gallery/05.jpg" />
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<!-- Map -->
+			<div class="map">
+				<div class="container">
+					<div id="map" style="width: 600px; height: 400px"></div>
+				</div>
+			</div>
+		</main>
+		<!-- Footer -->
+		<footer class="footer">
+			<div class="container">
+				<div class="footer__row">
+					<div class="footer__first">
+						<div class="footer__item">
+							<a href="#" class="footer__logo">
+								<img src="./icons/logo.svg" alt="Code logo" class="logo">
+							</a>
+							<div class="footer__name">Школа <br /> программирования</div>
+						</div>
+						<ul class="socials">
+							<li class="socials__item">
+								<a href="#" class="socials__link">
+									<img src="./icons/instagram.svg" />
+								</a>
+							</li>
+							<li class="socials__item">
+								<a href="#" class="socials__link">
+									<img src="./icons/vk.svg" />
+								</a>
+							</li>
+							<li class="socials__item">
+								<a href="#" class="socials__link">
+									<img src="./icons/fb.svg" />
+								</a>
+							</li>
+							<li class="socials__item">
+								<a href="#" class="socials__link">
+									<img src="./icons/youtube.svg" />
+								</a>
+							</li>
+						</ul>
+					</div>
+					<nav class="nav">
+						<ul class="nav__list">
+							<li class="nav__list-item">
+								<a href="#" class="nav__list-link">Чему вы научитесь</a>
+							</li>
+							<li class="nav__list-item">
+								<a href="#" class="nav__list-link">Процесс обучения</a>
+							</li>
+							<li class="nav__list-item">
+								<a href="#" class="nav__list-link">Стоимость</a>
+							</li>
+							<li class="nav__list-item">
+								<a href="#" class="nav__list-link">Контакты</a>
+							</li>
+							<li class="nav__list-item">
+								<a href="#" class="nav__list-link">Регистрация</a>
+							</li>
+						</ul>
+					</nav>
+					<div>
+						<a href="tel:+79999999999" class="phone footer__link">+7 (999) 999 99 99</a>
+						<a href="mailto:info@code.ru" class="footer__link">info@code.ru</a>
+					</div>
+				</div>
+				<div class="line footer__line"></div>
+				<div class="footer__info">
+					<p class="footer__text">© 2023 — Все права защищены</p>
+					<a href="#" class="footer__text">Пользовательское соглашение</a>
+					<a href="#" class="footer__text">Политика конфиденциальности</a>
+				</div>
+			</div>
+		</footer>
+		<!-- Modals -->
+		<div class="modal" id="modal">
+			<div class="modal__box">
+				<div class="modal__content">
+					<h4 class="modal__title">Заказать звонок</h4>
+					<form class="form">
+						<div class="form__item">
+							<label class="form__item-label" for="name">Имя</label>
+							<input class="input form__item-input" type="text" id="name" placeholder="ваше имя">
+						</div>
+						<div class="form__item">
+							<label class="form__item-label" for="name">Телефон</label>
+							<input class="input form__item-input" type="text" id="name" placeholder="+7 ХХХ - ХХХ - ХХ -ХХ">
+						</div>
+						<div class="form__item">
+							<label class="form__item-label" for="name">Email</label>
+							<input class="input form__item-input" type="email" id="name" placeholder="mail@site.com">
+						</div>
+						<div class="form__item">
+							<label class="form__item-label" for="name">Имя</label>
+							<textarea class="textarea form__item-textarea" type="text" id="name"
+								placeholder="Ваше сообщение ..."></textarea>
+						</div>
+						<div class="form__angreement">Нажимая кнопку “Отправить”, соглашаюсь с <br />
+							<span>политикой конфидениальности</span>
+						</div>
+						<button class="btn form__btn">
+							<span>Отправить</span>
+							<img src="./icons/arrow.svg" />
+						</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Scripts -->
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+
+	<script src="./scripts/scripts.js"></script>
+</body>
+
+</html>
